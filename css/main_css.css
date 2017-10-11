@@ -282,7 +282,7 @@ header .sidebar {
 }
 
 .sidebar li:last-of-type {
-    margin-left: -3.05px;
+    margin-left: -3.06px;
     background-color: #e24602;
 }
 
@@ -309,7 +309,8 @@ body .sidebar li:hover {
 }
 
 .sidebar form input[type="text"] {
-    width: 197px;
+    box-sizing: border-box;
+    width: 236px;
     padding: 0 26px 0 13px;
     font-family: Raleway, sans-serif;
     font-size: 10px;
@@ -324,7 +325,7 @@ body .sidebar li:hover {
 
 .sidebar form input[type="button"] {
     width: 34px;
-    margin-left: -3.05px;
+    margin-left: -3.06px;
     background-color: #333333;
 }
 
