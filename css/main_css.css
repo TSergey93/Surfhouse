@@ -42,8 +42,7 @@ a {
 }
 
 .mobile_menu,
-.close_menu,
-.display {
+.close_menu {
     display: none;
 }
 
@@ -303,7 +302,7 @@ body .sidebar li:hover {
 }
 
 .sidebar form input {
-    height: 34px;
+    height: 33.5px;
     border: none;
     vertical-align: middle;
 }
@@ -2258,7 +2257,7 @@ footer .footer_bar {
     }
 
     .sidebar form {
-        margin: 20px 0;
+        margin-top: 10px;
     }
 
     .mobile_menu {
@@ -2284,6 +2283,7 @@ footer .footer_bar {
         border-top: 7px solid #f8f8f8;
         border-radius: 0;
         opacity: 1;
+        pointer-events: none;
         z-index: 5;
     }
 
@@ -2835,7 +2835,8 @@ footer .footer_bar {
         text-align: center;
     }
 
-    .modal_overlay {
+    .modal_overlay::before {
+        content: "";
         position: fixed;
         top: 0;
         left: 0;
