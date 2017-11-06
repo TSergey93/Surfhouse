@@ -7,6 +7,7 @@
 
 body {
     background: #f8f8f8;
+    min-width: 284px;
 }
 
 .header_content,
@@ -90,7 +91,7 @@ header {
     vertical-align: middle;
 }
 
-.header_vidget li:nth-of-type(1n+2) {
+.header_vidget li:not(:first-child) {
     margin-left: -3px;
 }
 
@@ -158,10 +159,8 @@ a.inst:hover {
     position: relative;
     padding-right: 15px;
     background: none;
-    font-size: 10px;
-    font-weight: 700;
-    line-height: 10px;
     color: #e9e9e9;
+    font: 700 10px/1 Raleway, sans-serif;
 }
 
 .header_vidget .lang span {
@@ -176,8 +175,7 @@ header .sidebar {
     width: 270px;
     margin-left: 55px;
     background-color: #fb4d01;
-    font-size: 12px;
-    line-height: 12px;
+    font: 12px/1 Raleway, sans-serif;
 }
 
 .sidebar>div:nth-of-type(1) {
@@ -197,18 +195,13 @@ header .sidebar {
     position: relative;
     padding-top: 14px;
     padding-left: 29.6%;
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 17px;
     color: #ffffff;
+    font: 600 18px/17px Raleway, sans-serif;
 }
 
 .sidebar i {
     padding-left: 5px;
-    font-style: normal;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 12px;
+    font: normal 400 12px/1 Raleway, sans-serif;
     color: #faef03;
 }
 
@@ -231,10 +224,8 @@ header .sidebar {
     position: relative;
     margin-left: 66px;
     margin-bottom: 15px;
-    font-size: 10px;
-    font-weight: 300;
-    line-height: 10px;
     letter-spacing: 0.075em;
+    font: 300 10px/1 Raleway, sans-serif;
     color: #333333;
 }
 
@@ -292,8 +283,7 @@ body .sidebar li:hover {
 .sidebar a {
     display: block;
     padding: 8px 0;
-    font-size: 11px;
-    line-height: 11px;
+    font: 11px/1 Raleway, sans-serif;
     color: #ffffff;
 }
 
@@ -311,10 +301,7 @@ body .sidebar li:hover {
     box-sizing: border-box;
     width: 236px;
     padding: 0 26px 0 13px;
-    font-family: Raleway, sans-serif;
-    font-size: 10px;
-    font-weight: 400;
-    line-height: 10px;
+    font: 400 10px/1 Raleway, sans-serif;
     color: #0c0c0c;
 }
 
@@ -397,14 +384,12 @@ main .left_sidebar {
     display: block;
     background-color: #333333;
     padding: 30px 0 20px 42px;
-    font-size: 14px;
-    font-weight: 700;
+    font: 700 14px/1.2 Roboto, sans-serif;
     color: #ffffff;
 }
 
 .left_sidebar section:not(.tags) ul {
-    font-size: 14px;
-    font-weight: 900;
+    font: 900 14px/1.2 Roboto, sans-serif;
 }
 
 .left_sidebar .menu ul {
@@ -447,11 +432,9 @@ main .left_sidebar {
 }
 
 .tags h2 {
-    padding: 21px 0 15px 30px;
+    padding: 21px 0 14px 30px;
     background: none;
-    font-size: 24px;
-    font-weight: 900;
-    font-style: italic;
+    font: italic 900 24px/1.2 Roboto, sans-serif;
     color: #000000;
 }
 
@@ -491,10 +474,8 @@ main .left_sidebar {
 
 .left_sidebar .tags span {
     margin-left: 30px;
-    font-size: 14px;
+    font: italic 400 14px/1.2 Roboto, sans-serif;
     color: #000000;
-    font-weight: 400;
-    font-style: italic;
 }
 
 .left_sidebar .tags span:hover {
@@ -508,9 +489,7 @@ main .left_sidebar {
         --NOW IS OPEN!--
 
     padding: 125px 10px 67px 149px;
-    font-size: 36px;
-    font-style: italic;
-    line-height: 36px;
+    font: italic 36px/1 Roboto, sans-serif;
     color: #333333;
 */
     background: url("../img/Now Is Open.jpg") no-repeat 100% 100%;
@@ -544,8 +523,7 @@ main .page_products {
     margin-left: -3px;
     padding: 4px;
     padding-bottom: 3px;
-    font-size: 12px;
-    font-weight: 400;
+    font: 400 12px/1.1 Roboto, sans-serif;
     color: #989898;
 }
 
@@ -572,8 +550,7 @@ main .page_products {
     justify-content: space-between;
     align-items: baseline;
     margin-bottom: 35px;
-    font-size: 11px;
-    font-weight: 400;
+    font: 400 11px/1.2 Roboto, sans-serif;
     color: #333333;
 }
 
@@ -584,9 +561,7 @@ main .page_products {
     padding-left: 4px;
     outline: none;
     background: transparent;
-    font-family: Roboto, sans-serif;
-    font-size: 12px;
-    font-weight: 400;
+    font: 400 12px/1.2 Roboto, sans-serif;
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
@@ -645,9 +620,7 @@ main .page_products {
     padding-left: 4px;
     outline: none;
     background: transparent;
-    font-family: Roboto, sans-serif;
-    font-size: 11px;
-    font-weight: 400;
+    font: 400 11px/1.2 Roboto, sans-serif;
     color: #333333;
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -713,27 +686,22 @@ main .page_products {
     display: flex;
     justify-content: space-between;
     height: 21px;
-    font-size: 14px;
-    font-weight: 900;
-    font-style: italic;
-    line-height: 18px;
     color: #333333;
 }
 
 .products .product_name {
     display: inline-block;
-    position: static;
     min-width: 0%;
-    font-size: 14px;
-    line-height: 18px;
+    font: italic 900 14px/1.3 Roboto, sans-serif;
     margin-top: 0;
-    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
 }
 
 .products span {
     position: relative;
-    font-size: 18px;
-    line-height: 20px;
+    font: italic 900 18px/20px Roboto, sans-serif;
     margin-top: 1px;
 }
 
@@ -773,8 +741,7 @@ main .page_products {
     right: -10px;
     width: 47px;
     height: 47px;
-    font-size: 9px;
-    font-weight: 400;
+    font: 400 9px/1.2 Roboto, sans-serif;
     padding-top: 9px;
     padding-left: 21px;
 }
@@ -796,6 +763,17 @@ main .page_products {
 /* product catalog.html page end*/
 
 /* product description.html page begin*/
+
+.descriptions nav a,
+.overview div p,
+.price,
+.overview h2,
+.overview>span:nth-of-type(-n+2),
+.overview>ul li,
+.overview .privilege,
+.description li a {
+    font: 400 12px/1.1 Roboto, sans-serif;;
+}
 
 main .descriptions {
     max-width: 872px;
@@ -820,8 +798,6 @@ main .descriptions {
     margin-left: -3px;
     padding: 4px;
     padding-bottom: 3px;
-    font-size: 12px;
-    font-weight: 400;
     color: #989898;
 }
 
@@ -910,14 +886,11 @@ main .descriptions {
 .overview h1 {
     margin-top: 2px;
     margin-bottom: 0;
-    font-size: 24px;
-    font-weight: 700;
+    font: 700 24px/1.15 Roboto, sans-serif;
 }
 
-.overview p:nth-of-type(1) {
+.overview div p {
     display: inline-block;
-    font-size: 12px;
-    font-weight: 400;
 }
 
 .overview .raiting {
@@ -939,16 +912,12 @@ main .descriptions {
 }
 
 .price {
-    font-size: 12px;
-    font-weight: 400;
     color: #707070;
 }
 
 .price>span {
     margin-bottom: 5px;
-    font-size: 22px;
-    font-weight: 500;
-    font-style: italic;
+    font: italic 500 22px/1.2 Roboto, sans-serif;
     color: #111111;
 }
 
@@ -970,16 +939,12 @@ main .descriptions {
 .overview h2 {
     margin-top: 23px;
     margin-bottom: 6px;
-    font-size: 12px;
-    font-weight: 400;
     color: #353535;
 }
 
-.overview p:nth-of-type(2) {
+.overview>p {
     padding-bottom: 16px;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 16px;
+    font: 400 12px/1.6 Roboto, sans-serif;
     color: #707070;
 }
 
@@ -987,8 +952,6 @@ main .descriptions {
     display: inline-block;
     margin-top: 18px;
     margin-bottom: 12px;
-    font-size: 12px;
-    font-weight: 400;
     color: #333333;
 }
 
@@ -1000,8 +963,6 @@ main .descriptions {
     display: inline-block;
     margin-right: 7px;
     padding: 6px;
-    font-size: 12px;
-    font-weight: 400;
     color: #333333;
 }
 
@@ -1034,12 +995,10 @@ main .descriptions {
     box-sizing: border-box;
     margin-top: 21px;
     padding: 0 6px;
-    font-size: 12px;
-    font-weight: 400;
     color: #353535;
 }
 
-.privilege div:nth-of-type(1) {
+.privilege div {
     margin-top: 1px;
 }
 
@@ -1059,8 +1018,7 @@ main .descriptions {
     display: inline-block;
     padding: 16px 14px 14px;
     background: #fb4d01;
-    font-size: 16px;
-    font-weight: 400;
+    font: 400 16px/1.1 Roboto, sans-serif;
     color: #ffffff;
 }
 
@@ -1069,10 +1027,9 @@ main .descriptions {
     box-shadow: inset 0 0 20px -5px black;
 }
 
-.privilege div:nth-of-type(2) {
+.privilege ul {
     margin-top: -5px;
-    font-size: 11px;
-    line-height: 20px;
+    font: 11px/20px Roboto, sans-serif;
 }
 
 .descriptions .description {
@@ -1087,15 +1044,13 @@ main .descriptions {
     display: inline-block;
 }
 
-.description li:nth-of-type(n+2) {
+.description li:not(:first-child) {
     margin-left: -15px;
 }
 
 .description li a {
     display: inline-block;
     padding: 13px 17px 9px 16px;
-    font-size: 12px;
-    font-weight: 400;
     letter-spacing: -0.005em;
     color: #333333;
 }
@@ -1110,9 +1065,7 @@ main .descriptions {
     margin-top: -1px;
     margin-left: -11px;
     padding: 7px 13px 18px;
-    font-size: 11px;
-    font-weight: 400;
-    line-height: 15px;
+    font: 400 11px/15px Roboto, sans-serif;
     letter-spacing: 0.0755em;
     color: #808080;
     border: 1px solid #d6d4d4;
@@ -1136,10 +1089,7 @@ main .descriptions {
 
 .descriptions article h2 {
     margin-left: -10px;
-    font-family: Raleway, sans-serif;
-    font-size: 30px;
-    font-weight: 800;
-    font-style: italic;
+    font: italic 800 30px/1.15 Raleway, sans-serif;
     color: #333333;
 }
 
@@ -1316,9 +1266,7 @@ footer .footer_menu {
 
 .footer_menu h2 {
     margin-bottom: 24px;
-    font-family: Raleway, sans-serif;
-    font-size: 18px;
-    font-weight: 800;
+    font: 800 18px/1.15 Raleway, sans-serif;
     color: #ffffff;
 }
 
@@ -1356,9 +1304,7 @@ footer .footer_menu {
 
 .footer_menu a,
 .footer_menu p {
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 18px;
+    font: 400 12px/1.5 Roboto, sans-serif;
     color: #ffffff;
 }
 
@@ -1375,10 +1321,7 @@ footer .footer_menu {
     height: 28px;
     padding: 2px 10px 0 21px;
     background-color: #fff51f;
-    font-family: Roboto, sans-serif;
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 21px;
+    font: 700 12px/21px Roboto, sans-serif;
     color: #333333;
 }
 
@@ -1399,9 +1342,7 @@ footer .footer_menu {
 .footer_menu form input {
     border: none;
     vertical-align: middle;
-    font-family: Roboto, sans-serif;
-    font-size: 12px;
-    line-height: 21px;
+    font: 12px/21px Roboto, sans-serif;
 }
 
 .footer_menu article {
@@ -1410,14 +1351,13 @@ footer .footer_menu {
     margin-left: -10px;
 }
 
-.footer_menu article img:nth-of-type(n+2) {
+.footer_menu article img:not(:first-child) {
     margin-left: 7px;
 }
 
 .footer_menu section {
     padding-top: 4px;
-    font-size: 14px;
-    font-weight: 400;
+    font: 400 14px/1.2 Roboto, sans-serif;
     color: #ffffff;
 }
 
@@ -1446,8 +1386,7 @@ footer .footer_bar {
     display: inline-block;
     margin-left: 61px;
     padding: 21px 0 16px;
-    font-size: 12px;
-    font-weight: 400;
+    font: 400 12px/1.1 Roboto, sans-serif;
     color: #dad9d9;
 }
 
@@ -1788,9 +1727,7 @@ footer .footer_bar {
     .left_sidebar section h2 {
         padding: 10px 5px 8px;
         background-color: #333333;
-        font-size: 14px;
-        font-weight: 700;
-        font-style: normal;
+        font: 700 14px/1.15 Roboto, sans-serif;
         text-transform: uppercase;
         text-align: center;
         color: #ffffff;
@@ -2387,9 +2324,7 @@ footer .footer_bar {
         position: relative;
         padding: 10px 5px;
         background-color: #333333;
-        font-size: 14px;
-        font-weight: 700;
-        font-style: normal;
+        font: 700 14px/1.15 Roboto, sans-serif;
         text-transform: uppercase;
         text-align: center;
         color: #ffffff;
@@ -2888,7 +2823,7 @@ footer .footer_bar {
     }
 
     .options .sort select {
-        width: 65px;
+        width: 70px;
         margin-left: 4px;
     }
 
@@ -2897,7 +2832,7 @@ footer .footer_bar {
     }
 
     .page_products .sort .select_arrow {
-        width: 70px;
+        width: 75px;
     }
 }
 
@@ -3004,12 +2939,6 @@ footer .footer_bar {
 
 @media (max-width:392px) {
     .descriptions>div:nth-of-type(1)>div img:nth-of-type(3) {
-        display: none;
-    }
-}
-
-@media (max-width:291px) {
-    .descriptions>div:nth-of-type(1)>div img:nth-of-type(2) {
         display: none;
     }
 }
@@ -3166,6 +3095,10 @@ footer .footer_bar {
 
 /* product catalog.html page begin*/
 
+/* product catalog.html page end*/
+
+/*DRY*/
+
 /*Setting up product names begin*/
 
 @media (max-width:768px) {
@@ -3189,4 +3122,23 @@ footer .footer_bar {
 
 /*Setting up product names end*/
 
-/* product catalog.html page end*/
+@media (max-width:1271px) {
+    .footer_menu div:nth-of-type(5) p {
+        text-align: justify;
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
+    }
+}
+
+@media (max-width:1089px) {
+    .overview>p,
+    .description>p {
+        text-align: justify;
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
+    }
+}
