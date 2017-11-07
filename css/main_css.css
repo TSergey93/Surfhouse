@@ -2143,13 +2143,13 @@ footer .footer_bar {
         top: 20px;
         right: -270px;
         background: #fb4d01;
-        transition: right .5s linear;
+        transition: transform .5s linear;
         opacity: 0.965;
         z-index: 5;
     }
 
     .header_content_open {
-        right: 0;
+        transform: translate3d(-270px, 0, 0);
     }
 
     .header_content img {
@@ -2214,8 +2214,7 @@ footer .footer_bar {
     .mobile_menu_open {
         width: 180px;
         height: 8px;
-        top: 5px;
-        right: 0;
+        transform: translate3d(10px, -15px, 0);
         background-color: #e24602;
         border-top: 7px solid #f8f8f8;
         border-radius: 0;
@@ -2226,43 +2225,40 @@ footer .footer_bar {
 
     .mobile_menu .strip {
         display: block;
-        position: absolute;
         width: 20px;
         height: 1px;
-        right: 10px;
         background-color: #f8f8f8;
         border-radius: 10%;
         transition: all .2s linear;
     }
 
     .mobile_menu .one {
-        top: 15px;
+        transform: translate3d(10px, 15px, 0);
     }
 
     .mobile_menu .two {
-        top: 20px;
+        transform: translate3d(10px, 19px, 0);
     }
 
     .mobile_menu .free {
-        top: 25px;
+        transform: translate3d(10px, 23px, 0);
     }
 
     .strip_open {
         width: 40px !important;
         height: 4px !important;
-        top: 2px !important;
     }
 
     .strip_one_open {
-        left: 10px !important;
+        transform: translate3d(10px, 2px, 0) !important;
     }
 
     .strip_two_open {
-        right: 70px !important;
+        transform: translate3d(70px, -2px, 0) !important;
     }
 
     .strip_free_open {
-        right: 10px !important;
+        transform: translate3d(130px, -6px, 0) !important;
     }
 
     .close_menu {
