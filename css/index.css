@@ -23,7 +23,7 @@ h1::after {
     content: '';
     width: 100%;
     height: 28px;
-    background: url("../img/hands down.png") repeat-x;
+    background: url("../img/hands_down.png") repeat-x;
 }
 
 body>div {
