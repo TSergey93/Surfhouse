@@ -37,6 +37,7 @@ body>div>div {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    width: 100%;
     margin-top: auto;
     margin-bottom: auto;
 }
