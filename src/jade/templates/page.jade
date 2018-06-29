@@ -1,0 +1,24 @@
+include ../mixins.jade
+
+doctype html
+
+block variables
+
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        block title
+        block css
+            +styles("css/style.css?rev=@@hash")
+    body
+        object.svg-sprite(type="image/svg+xml" data="img/svg_sprite.svg") Your browser does not support SVG
+        header(class="main-header main-header--#{headerTagName}")
+            include ../includes/header
+        main(class="main-page main-page--#{mainTagName}")
+            include ../includes/sidebar
+            block contentPage
+            include ../includes/big-widgets
+        include ../includes/footer
+        include ../includes/mobile-menu
+    script(type="text/javascript" src="js/main-js.js?rev=@@hash")

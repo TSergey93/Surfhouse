@@ -1,0 +1,13 @@
+mixin styles(...files)
+    - each file in files
+        link(rel="stylesheet" href=file)
+
+mixin footerMenu(blockName, variable)
+    ul(class="#{blockName}__list")
+        - each linkPath, linkName in variable
+            li(class="#{blockName}__item"): a(class="#{blockName}__link" href=linkPath) #{linkName}
+
+mixin sidebarMenu(blockName, variable)
+    ul(class="#{blockName}__list #{blockName}__list--no-js")
+        - each linkPath, linkName in variable
+            li(class="#{blockName}__item"): a(class="#{blockName}__link" href=linkPath) #{linkName}

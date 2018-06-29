@@ -1,0 +1,56 @@
+- var sidebarMenu = {"ABOUT": "#", "APPAREL": "#", "SURF APPAREL": "#", "WINDSURF": "#", "KITESURF": "#", "ACCESSORIES": "#", "SALE": "#", "BRANDS": "#", "BLOG": "#", "GADGETS": "#", "CANTACT": "#"}
+- var sidebarCategory = {"MEN": "#", "WOMEN": "#", "KIDS": "#", "WETSUITS": "#", "OUTERWEAR": "#"}
+- var sidebarBrand = {"BILLABONG": "#", "ELEMENT": "#", "O'NEILL": "#", "OAKLEY": "#", "REEF": "#", "QUIKSILVER": "#", "RIPCURL": "#", "JACKSS": "#"}
+
+section.sidebar-menu.sidebar-menu--no-js
+    h2.sidebar-menu__title MENU
+    +sidebarMenu("sidebar-menu", sidebarMenu)
+section.sidebar-category.sidebar-category--no-js
+    h2.sidebar-category__title CATEGORY OPTIONS
+    +sidebarMenu("sidebar-category", sidebarCategory)
+section.sidebar-brand.sidebar-brand--no-js
+    h2.sidebar-brand__title BRAND OPTIONS
+    +sidebarMenu("sidebar-brand", sidebarBrand)
+section.sidebar-tags.sidebar-tags--no-js
+    h2.sidebar-tags__title Tags Widget
+    div.sidebar-tags__wrapper.sidebar-tags__wrapper--no-js
+        ul.sidebar-tags__list.sidebar-tags__list--kitesurf
+            li.sidebar-tags__item
+                a.sidebar-tags__link.sidebar-tags__link--big(href="#") Kitesurf
+            li.sidebar-tags__item
+                a.sidebar-tags__link(href="#") Super
+            li.sidebar-tags__item
+                a.sidebar-tags__link(href="#") Duper
+            li.sidebar-tags__item.sidebar-tags__item--margin
+                a.sidebar-tags__link(href="#") Theme
+            li.sidebar-tags__item
+                a.sidebar-tags__link(href="#") Men
+            li.sidebar-tags__item
+                a.sidebar-tags__link(href="#") Women
+            li.sidebar-tags__item
+                a.sidebar-tags__link(href="#") Equipment
+            li.sidebar-tags__item
+                a.sidebar-tags__link(href="#") Best
+            li.sidebar-tags__item
+                a.sidebar-tags__link(href="#") Accessories
+            li.sidebar-tags__item
+                a.sidebar-tags__link(href="#") Men
+        ul.sidebar-tags__list.sidebar-tags__list--apparel
+            li.sidebar-tags__item
+                a.sidebar-tags__link.sidebar-tags__link--big(href="#") Apparel
+            li.sidebar-tags__item
+                a.sidebar-tags__link(href="#") Super
+            li.sidebar-tags__item
+                a.sidebar-tags__link(href="#") Duper
+            li.sidebar-tags__item
+                a.sidebar-tags__link(href="#") Theme
+            li.sidebar-tags__item
+                a.sidebar-tags__link(href="#") Responsiv
+            li.sidebar-tags__item
+                a.sidebar-tags__link(href="#") Men
+            li.sidebar-tags__item
+                a.sidebar-tags__link(href="#") Women
+            li.sidebar-tags__item
+                a.sidebar-tags__link(href="#") Equipment
+        a.sidebar-tags__all-tags view all tags →
+img.sidebar-img(src="img/Now_Is_Open.jpg" alt="NOW IS OPEN!")

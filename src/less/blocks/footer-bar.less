@@ -1,0 +1,133 @@
+.footer-bar {
+    display: flex;
+    padding: 0 ~'calc(50% - 1170px / 2)';
+    background-color: @dark-grey;
+
+    @media (max-width: 1270px) {
+        padding: 0 ~'calc(50% - 90% / 2)';
+    }
+
+    @media @tablet-width {
+        flex-direction: column;
+    }
+}
+
+.footer-bar__text {
+    display: inline-block;
+    margin-left: 6px;
+    padding: 9px 0 4px;
+    font: 400 12px/1.1 Roboto, sans-serif;
+    color: #dad9d9;
+
+    @media @tablet-width {
+        margin-left: 0;
+        padding-bottom: 0;
+        text-align: center;
+    }
+
+    @media @mobile-width {
+        padding: 0 15px;
+    }
+}
+
+.footer-bar__list {
+    .reset-list();
+    margin: 14px 16px 0 auto;
+
+    @media @tablet-width {
+        margin: 0 auto 14px;
+    }
+
+    @media @mobile-width {
+        padding: 0 15px;
+    }
+}
+
+.footer-bar__item {
+    display: inline-block;
+    margin-left: 5px;
+    vertical-align: middle;
+
+    @media @tablet-width {
+        margin-left: 25px;
+
+        &:first-of-type {
+            margin-left: 0;
+        }
+    }
+
+    @media @mobile-width {
+        margin-left: 15px;
+    }
+}
+
+.footer-bar__link {
+    display: block;
+    padding: 5px;
+    fill: @white;
+    font-size: 0;
+    transition: fill 150ms linear;
+
+    &--fb {
+        width: 8px;
+        height: 16px;
+
+        &:hover {
+            fill: #50638B;
+        }
+    }
+
+    &--tw {
+        width: 16px;
+        height: 14px;
+
+        &:hover {
+            fill: #119FDA;
+        }
+    }
+
+    &--pint {
+        width: 14px;
+        height: 16px;
+
+        &:hover {
+            fill: #C23928;
+        }
+    }
+
+    &--google {
+        width: 14px;
+        height: 15px;
+
+        &:hover {
+            fill: #C7592E;
+        }
+    }
+
+    &--tumb {
+        width: 10px;
+        height: 15px;
+
+        &:hover {
+            fill: #515B6F;
+        }
+    }
+
+    &--inst {
+        width: 16px;
+        height: 16px;
+
+        &:hover {
+            fill: #872612;
+        }
+    }
+
+    &--rss {
+        width: 14px;
+        height: 15px;
+
+        &:hover {
+            fill: #DB7200;
+        }
+    }
+}

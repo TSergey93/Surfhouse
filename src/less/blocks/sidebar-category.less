@@ -1,0 +1,103 @@
+.sidebar-category {
+    grid-area: sidebar-category;
+
+    @media @tablet-width {
+        &:hover .sidebar-category__title {
+            .main-sidebar-title-tablet-hover();
+        }
+
+        &:hover .sidebar-category__list {
+            .main-sidebar-list-tablet-open-menu();
+        }
+
+        &:hover .sidebar-category__item {
+            .main-sidebar-first-item-tablet-hover();
+        }
+
+        &:hover .sidebar-category__link {
+            .main-sidebar-link-tablet-hover();
+        }
+    }
+
+    @media @mobile-width {
+        .main-sidebar-mobile();
+        .main-sidebar-mobile-hover();
+
+        &:hover::before {
+            top: 40px;
+        }
+
+        &--no-js:hover::before {
+            top: 305px;
+        }
+    }
+
+    @media (max-width: 400px) {
+        .main-sidebar-mobile-400();
+        .main-sidebar-mobile-400-hover();
+    }
+}
+
+.sidebar-category__title {
+    .main-sidebar-title();
+
+    @media @tablet-width {
+        .main-sidebar-title-tablet();
+    }
+}
+
+.sidebar-category__list {
+    .main-sidebar-list();
+    background-color: #81e6fe;
+
+    @media @tablet-width {
+        .main-sidebar-list-tablet();
+        width: 146px;
+    }
+
+    @media @mobile-width {
+        .main-sidebar-list-mobile();
+
+        &--no-js {
+            .main-sidebar-list-mobile-no-js();
+        }
+    }
+
+    @media (max-width: 400px) {
+        .main-sidebar-list-mobile-400();
+    }
+}
+
+.sidebar-category__item {
+    &:last-of-type {
+        padding-bottom: 19px;
+    }
+
+    @media @tablet-width {
+        .main-sidebar-item-tablet();
+
+        &:first-of-type::before {
+            left: 62px;
+        }
+    }
+
+    @media @mobile-width {
+        .main-sidebar-item-mobile();
+
+        &:first-of-type::before {
+            display: none;
+        }
+    }
+}
+
+.sidebar-category__link {
+    .main-sidebar-link();
+
+    @media @tablet-width {
+        .main-sidebar-link-tablet();
+    }
+
+    @media @mobile-width {
+        .main-sidebar-link-mobile();
+    }
+}

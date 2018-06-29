@@ -1,0 +1,115 @@
+section.page-description
+    nav.products-nav.products-nav--description
+        ul.products-nav__list
+            li.products-nav__item
+                a.products-nav__link(href="#") Home
+            li.products-nav__item
+                a.products-nav__link(href="#") Apparel
+            li.products-nav__item
+                a.products-nav__link(href="#") Women
+            li.products-nav__item
+                a.products-nav__link(href="#") Peeky Cropped
+        a.products-nav__back &laquo; Back to previous page
+    div.page-description__wrapper
+        div.page-description__pictures
+            img.page-description__img(src="img/products/Peeky_Cropped.jpg")
+            div.page-description__add-img-wrapper
+                img.page-description__add-img(src="img/products/Peeky_Cropped_photo_1.jpg")
+                img.page-description__add-img(src="img/products/Peeky_Cropped_photo_2.jpg")
+                img.page-description__add-img(src="img/products/Peeky_Cropped_photo_3.jpg")
+                svg.page-description__img-arrow.page-description__img-arrow--left
+                    use(href="img/svg_sprite.svg#arrow")
+                svg.page-description__img-arrow.page-description__img-arrow--right
+                    use(href="img/svg_sprite.svg#arrow")
+        div.page-description__overview-header
+            h2.page-description__title PEEKY CROPPED
+            div.page-description__raiting
+                - for (var i=0; i<4; i++) {     
+                    svg
+                        use(href="img/svg_sprite.svg#star_plus")
+                - }
+                svg
+                    use(href="img/svg_sprite.svg#star_minus")
+            p.page-description__raiting-text 1 Review(s) | Add Your Review
+            div.page-description__availability-wrapper
+                span.page-description__price €. 578.50
+                div.page-description__availability
+                    |Product code: 
+                    span.page-description__code 257 
+                    |Availability: 
+                    span.page-description__stock In stock
+        section.page-description__overview-info
+            h3.page-description__review-title QUICK OVERVIEW:
+            p.page-description__review-text
+                |Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. When an unknown printer took a galley of type.
+            h3.page-description__size-title SIZE
+            ul.page-description__size-list
+                li.page-description__size-item
+                    span.page-description__size-caption 25
+                li.page-description__size-item
+                    span.page-description__size-caption 26
+                li.page-description__size-item
+                    span.page-description__size-caption 27
+                li.page-description__size-item
+                    span.page-description__size-caption 28
+                li.page-description__size-item
+                    span.page-description__size-caption 29
+                li.page-description__size-item
+                    span.page-description__size-caption 30
+                li.page-description__size-item
+                    span.page-description__size-caption 31
+                li.page-description__size-item
+                    span.page-description__size-caption 32
+                li.page-description__size-item
+                    span.page-description__size-caption 33
+            h3.page-description__length-title LENGTH
+            ul.page-description__length-list
+                li.page-description__length-item
+                    span.page-description__length-caption 32
+                li.page-description__length-item
+                    span.page-description__length-caption 34
+            div.page-description__privilege
+                div.page-description__quantity Quantity:
+                    span.page-description__quantity-text 1 +
+                a.page-description__cart ADD TO CART
+                ul.page-description__quantity-list
+                    li.page-description__quantity-item + Add to Wishlist
+                    li.page-description__quantity-item + Add to Compare
+                    li.page-description__quantity-item + Email to a Friend
+        section.page-description__info-wrapper
+            ul.page-description__info-list
+                li.page-description__info-item
+                    a.page-description__info-link(href="#") PRODUCT DESCRIPTION
+                li.page-description__info-item
+                    a.page-description__info-link(href="#") ADDITIONAL INFORMATION
+                li.page-description__info-item
+                    a.page-description__info-link(href="#") REVIEWS
+                li.page-description__info-item
+                    a.page-description__info-link(href="#") PRODUCT TAGS
+            div.page-description__info-text-wrapper
+                p.page-description__info-text
+                    |There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.
+                p.page-description__info-text
+                    |There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.
+                    br
+                    |- 6.1 oz. 100% preshrunk heavyweight cotton
+                    br
+                    |- Shoulder-to-shoulder taping
+                    br
+                    |- Double-needle sleeves and bottom hem<br>
+                p.page-description__info-text
+                    |It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.
+    div.page-description__also-like-wrapper
+        h2.page-description__also-like-title YOU MIGHT ALSO LIKE
+        include products-list
+        svg.page-description__products-arrows.page-description__products-arrows--left.page-description__products-arrows--also-like
+            use(href="img/svg_sprite.svg#arrow")
+        svg.page-description__products-arrows.page-description__products-arrows--right.page-description__products-arrows--also-like
+            use(href="img/svg_sprite.svg#arrow")
+    div.page-description__recently-viewed-wrapper
+        h2.page-description__recently-viewed-title RECENTLY VIEWED
+        include products-list
+        svg.page-description__products-arrows.page-description__products-arrows--left.page-description__products-arrows--recently-viewed
+            use(href="img/svg_sprite.svg#arrow")
+        svg.page-description__products-arrows.page-description__products-arrows--right.page-description__products-arrows--recently-viewed
+            use(href="img/svg_sprite.svg#arrow")

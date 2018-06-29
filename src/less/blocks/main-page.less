@@ -1,0 +1,72 @@
+.main-page {
+    .conteiner();
+    display: grid;
+    grid-template-columns: 270px 1fr;
+    grid-template-rows: repeat(4, minmax(min-content, 250px)) repeat(2, auto);
+    grid-column-gap: 30px;
+    grid-row-gap: 20px;
+
+    &--products {
+        grid-template-areas:
+        "sidebar-menu page-products"
+        "sidebar-category page-products"
+        "sidebar-brand page-products"
+        "sidebar-tags page-products"
+        "sidebar-img page-products"
+        "big-widgets big-widgets";
+    }
+
+    &--description {
+        grid-template-areas:
+        "sidebar-menu page-description"
+        "sidebar-category page-description"
+        "sidebar-brand page-description"
+        "sidebar-tags page-description"
+        "sidebar-img page-description"
+        "big-widgets big-widgets";
+    }
+
+    @media @tablet-width {
+        grid-template-columns: 1fr auto auto auto auto 1fr;
+        grid-template-rows: auto;
+        grid-gap: 0;
+
+        &--products {
+            grid-template-areas:
+            ". sidebar-menu sidebar-category sidebar-brand sidebar-tags ."
+            "page-products page-products page-products page-products page-products page-products"
+            "big-widgets big-widgets big-widgets big-widgets big-widgets big-widgets";
+        }
+
+        &--description {
+            grid-template-areas:
+            ". sidebar-menu sidebar-category sidebar-brand sidebar-tags ."
+            "page-description page-description page-description page-description page-description page-description"
+            "big-widgets big-widgets big-widgets big-widgets big-widgets big-widgets";
+        }
+    }
+
+    @media @mobile-width {
+        grid-template-columns: 1fr;
+
+        &--products {
+            grid-template-areas:
+            "sidebar-menu"
+            "sidebar-category"
+            "sidebar-brand"
+            "sidebar-tags"
+            "page-products"
+            "big-widgets";
+        }
+
+        &--description {
+            grid-template-areas:
+            "sidebar-menu"
+            "sidebar-category"
+            "sidebar-brand"
+            "sidebar-tags"
+            "page-description"
+            "big-widgets";
+        }
+    }
+}

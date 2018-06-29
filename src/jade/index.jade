@@ -1,0 +1,27 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title Surfhouse
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700")
+        link(rel="stylesheet" href="css/style.css?rev=@@hash")
+    body
+        div.main-top-info Click here
+        div.main-page-select
+            figure.main-page-select__img-content
+                a(href="product catalog.html")
+                    picture
+                        source(media="(max-width:1200px)" srcset="img/product_catalog_SMALL.jpg")
+                        img(src="img/product_catalog.jpg" alt="Product catalog")
+                    figcaption.main-page-select__caption
+                        span.main-page-select__text Page 1
+                        |product catalog
+            figure.main-page-select__img-content
+                a(href="product description.html")
+                    picture
+                        source(media="(max-width:1200px)" srcset="img/product_description_SMALL.jpg")
+                        img(src="img/product_description.jpg" alt="Product description")
+                    figcaption.main-page-select__caption
+                        span.main-page-select__text Page 2
+                        |product description

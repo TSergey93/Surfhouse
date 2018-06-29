@@ -1,0 +1,14 @@
+extends templates/page
+
+block variables
+    - var headerTagName = "product-catalog"
+    - var mainTagName = "products"
+
+block title
+    title Surfhouse catalog
+    
+append css
+    +styles("https://fonts.googleapis.com/css?family=Raleway:300,400,600,700,800,900|Roboto:400,700,900,900i")
+
+block contentPage
+    include includes/products

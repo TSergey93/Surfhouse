@@ -1,0 +1,116 @@
+.footer-newsletter {
+    .footer-info-section();
+
+    @media @tablet-width {
+        grid-column: ~"1 / 4";
+        grid-row: ~"2 / 3";
+        margin-top: 8px;
+        text-align: center;
+    }
+
+    @media (max-width: 640px) {
+        grid-column: ~"1 / -1";
+    }
+
+    @media @mobile-width {
+        .footer-info-section-mobile();
+        grid-column: 1;
+        grid-row: 4;
+        padding: 0 15px;
+    }
+}
+
+.footer-newsletter__title {
+    .footer-info-section-title();
+    margin-bottom: 5px;
+
+    @media @mobile-width {
+        margin-top: 0;
+    }
+}
+
+.footer-newsletter__text {
+    .footer-info-section-text();
+    width: 75%;
+
+    @media @tablet-width {
+        width: 100%;
+        text-align: left;
+    }
+
+    @media (max-width: 640px) {
+        text-align: center;
+    }
+}
+
+.footer-newsletter__form {
+    margin-top: 18px;
+
+    input {
+        border: none;
+        vertical-align: middle;
+        font: 12px/21px Roboto, sans-serif;
+
+        &[type="email"] {
+            box-sizing: border-box;
+            width: 180px;
+            height: 30px;
+            padding: 2px 10px 0 21px;
+            background-color: #fff51f;
+            font: 700 12px/21px Roboto, sans-serif;
+            color: @dark-grey;
+
+            &::placeholder {
+                color: @dark-grey;
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        &[type="submit"] {
+            width: 70px;
+            height: 30px;
+            padding: 3px 0 0;
+            background-color: @black;
+            font-weight: 400;
+            color: @white;
+        }
+
+        &[type="submit"]:hover {
+            background-color: #121212;
+        }
+    }
+}
+
+.footer-newsletter__payment {
+    width: 271px;
+    margin-top: 45px;
+    margin-left: -8px;
+
+    @media @tablet-width {
+        margin-left: 0;
+        margin: 25px auto 0;
+    }
+
+    @media @mobile-width {
+        margin-top: 15px;
+    }
+}
+
+.footer-newsletter__list {
+    .reset-list();
+}
+
+.footer-newsletter__item {
+    display: inline-block;
+
+    &:not(:first-child) {
+        margin-left: 10px;
+    }
+}
+
+.footer-newsletter__link {
+    .cursor();
+}

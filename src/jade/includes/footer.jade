@@ -1,0 +1,63 @@
+- var footerCategory = {"Home": "#", "About us": "#", "Eshop": "#", "Features": "#", "New collections": "#", "Blog": "#", "Contact": "#"}
+- var footerOurAccount = {"Your Account": "#", "Personal information": "#", "Addresses": "#", "Discount": "#", "Orders history": "#", "Mobile": "#", "Search Terms": "#"}
+- var footerOurSupport = {"Site Map": "#", "Terms": "#", "Advanced Search": "#", "Mobile": "#", "Contact Us": "#", "Discount": "#", "Addresses": "#"}
+- var footerCarts = ("aex", "mastercard", "maestero", "paypal", "discover", "visa_straight")
+
+footer.main-footer
+    div.main-footer-info
+        section.footer-category
+            h2.footer-category__title Category
+            +footerMenu("footer-category", footerCategory)
+        section.footer-our-account
+            h2.footer-our-account__title Our Account
+            +footerMenu("footer-our-account", footerOurAccount)
+        section.footer-our-support
+            h2.footer-our-support__title Our Support
+            +footerMenu("footer-our-support", footerOurSupport)
+        section.footer-newsletter
+            h2.footer-newsletter__title Newsletter
+            p.footer-newsletter__text
+                |Join thousands of other people sub&shy;scribe to our news
+            form.footer-newsletter__form
+                input(type="email" placeholder="INSERT EMAIL")
+                input(type="submit" value="SUBMIT")
+            article.footer-newsletter__payment
+                ul.footer-newsletter__list
+                    - each cart in footerCarts
+                        li.footer-newsletter__item
+                            a.footer-newsletter__link
+                                img.footer-newsletter__img(src="img/#{cart}.jpg")
+        section.footer-about-us
+            h2.footer-about-us__title About Us
+            p.footer-about-us__text
+                |Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+            div.footer-about-us__data-wrapper
+                span.footer-about-us__phone Phone:
+                |1-999-342-9876<br>
+                span.footer-about-us__email-caption e-mail:
+                i.footer-about-us__email info@surfhouse.com
+    section.footer-bar
+        p.footer-bar__text
+            |&copy; 2014  SURFHOUSE. All rights reserved - Designed by theuncreativelab.com
+        ul.footer-bar__list
+            li.footer-bar__item
+                svg.footer-bar__link.footer-bar__link--fb We are in FB
+                    use(href="img/svg_sprite.svg#fb")
+            li.footer-bar__item
+                svg.footer-bar__link.footer-bar__link--tw We are in TW
+                    use(href="img/svg_sprite.svg#tw")
+            li.footer-bar__item
+                svg.footer-bar__link.footer-bar__link--pint We are in Pint
+                    use(href="img/svg_sprite.svg#pint")
+            li.footer-bar__item
+                svg.footer-bar__link.footer-bar__link--google We are in G+
+                    use(href="img/svg_sprite.svg#google")
+            li.footer-bar__item
+                svg.footer-bar__link.footer-bar__link--tumb We are in Tumblr
+                    use(href="img/svg_sprite.svg#tumb")
+            li.footer-bar__item
+                svg.footer-bar__link.footer-bar__link--inst We are in Inst
+                    use(href="img/svg_sprite.svg#inst")
+            li.footer-bar__item
+                svg.footer-bar__link.footer-bar__link--rss We are in RSS
+                    use(href="img/svg_sprite.svg#rss")

@@ -1,0 +1,50 @@
+.footer-our-account {
+    .footer-info-section();
+
+    @media @tablet-width {
+        .footer-info-section-tablet();
+        grid-column: ~"3 / 5";
+    }
+
+    @media (max-width: 640px) {
+        grid-column: ~"2 / 3";
+    }
+
+    @media @mobile-width {
+        .footer-info-section-mobile();
+        grid-column: 1;
+        grid-row: 2;
+
+        &:hover {
+            .footer-info-section-title-mobile-hover();
+
+            .footer-our-account__list {
+                .footer-info-section-list-mobile-hover();
+            }
+        }
+    }
+}
+
+.footer-our-account__title {
+    .footer-info-section-title();
+
+    @media @mobile-width {
+        .footer-info-section-title-mobile();
+    }
+}
+
+.footer-our-account__list {
+    .reset-list() ;
+
+    @media @mobile-width {
+        .footer-info-section-list-mobile();
+    }
+}
+
+.footer-our-account__item {
+    .footer-info-section-item();
+}
+
+.footer-our-account__link {
+    .footer-info-section-link();
+}

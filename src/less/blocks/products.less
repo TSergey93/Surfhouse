@@ -1,0 +1,206 @@
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 5.88%;
+
+    @media (max-width: 1080px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 875px) {
+        grid-template-columns: 1fr;
+    }
+
+    @media @tablet-width {
+        grid-template-columns: repeat(3, 30%);
+        grid-column-gap: 4%;
+        justify-content: space-between;
+    }
+
+    @media (max-width: 680px) {
+        grid-template-columns: repeat(2, 48%);
+    }
+
+    @media @mobile-width {
+        grid-template-columns: 250px;
+        justify-content: center;
+    }
+}
+
+.products__wrapper {
+    position: relative;
+    margin: 0;
+    margin-bottom: 86px;
+
+    &:nth-last-of-type(3) {
+        margin-bottom: 78px;
+    }
+
+    &:nth-of-type(3n+1) .products__price {
+        margin-right: 4px;
+    }
+
+    &:nth-of-type(3n+2) .products__price {
+        margin-right: 12px;
+    }
+
+    &:nth-of-type(3n+3) .products__price {
+        margin-right: 19px;
+    }
+
+    @media (max-width: 1080px) {
+        margin: 0 auto 80px;
+
+        &:nth-of-type(n+11) {
+            display: none;
+        }
+
+        &:nth-of-type(2n+1) .products__price {
+            margin-right: 4px;
+        }
+
+        &:nth-of-type(2n+2) .products__price {
+            margin-right: 12px;
+        }
+    }
+
+    @media (max-width: 875px) {
+        margin: 0 auto 56px;
+
+        &:nth-of-type(n+6) {
+            display: none;
+        }
+
+        &:nth-of-type(n) .products__price {
+            margin-right: 4px;
+        }
+    }
+
+    @media @tablet-width {
+        margin: 0;
+        max-width: 100%;
+
+        &:nth-of-type(n) {
+            display: block;
+            margin-bottom: 56px;
+        }
+
+        &:nth-of-type(n) .products__price {
+            margin-right: 0;
+        }
+    }
+
+    @media (max-width: 680px) {
+        &:nth-of-type(n+11) {
+            display: none;
+        }
+    }
+
+    @media @mobile-width {
+        &:nth-of-type(n) {
+            margin-bottom: 50px;
+        }
+
+        &:nth-of-type(n+6) {
+            display: none;
+        }
+
+        &:nth-of-type(n) .products__price {
+            margin-right: 40px;
+        }
+    }
+}
+
+.products__image {
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.products__text-wrapper {
+    display: flex;
+    justify-content: space-between;
+    height: 21px;
+    margin-left: 16px;
+    color: @dark-grey;
+
+    @media @tablet-width {
+        display: block;
+        margin-left: 0;
+    }
+}
+
+.products__name {
+    margin-top: 0;
+    font: italic 900 14px/1.3 Roboto, sans-serif;
+    hyphens: auto;
+    text-transform: uppercase;
+    letter-spacing: -0.4px;
+
+    @media @tablet-width {
+        .one-line-text();
+    }
+
+    @media @mobile-width {
+        text-align: center;
+    }
+}
+
+.products__price {
+    position: relative;
+    font: italic 900 18px/20px Roboto, sans-serif;
+    margin-top: 2px;
+    padding-left: 10px;
+    letter-spacing: -0.5px;
+
+    @media @tablet-width {
+        display: block;
+        height: 20px;
+        padding-left: 0;
+        text-align: right;
+    }
+}
+
+.products__sale {
+    position: absolute;
+    right: 0;
+    bottom: -21px;
+    font-size: 14px;
+    text-decoration: line-through;
+    color: @orange;
+
+    @media @mobile-width {
+        left: 40px;
+        right: auto;
+        bottom: -1px;
+    }
+}
+
+.products__vobler {
+    box-sizing: border-box;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 47px;
+    height: 47px;
+    font: 400 9px/1.2 Roboto, sans-serif;
+    padding-top: 9px;
+    padding-left: 21px;
+
+    &--new {
+        background: linear-gradient(to top right, transparent 0%, transparent 49%, @orange 50%, @orange 100%);
+        color: @white;
+
+        &::before {
+            content: 'NEW';
+        }
+    }
+
+    &--hot {
+        background: linear-gradient(to top right, transparent 0%, transparent 49%, @dirty-yellow 50%, @dirty-yellow 100%);
+        color: @black;
+
+        &::before {
+            content: 'HOT';
+        }
+    }
+}
