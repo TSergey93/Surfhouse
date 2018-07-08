@@ -251,16 +251,16 @@
         background-color: #686868;
     }
 
-    &:hover::after,
-    &:hover::before {
-        background-color: #940000;
-    }
-
     &::after {
         transform: rotate(45deg);
     }
 
     &::before {
         transform: rotate(-45deg);
+    }
+
+    &:hover::after,
+    &:hover::before {
+        background-color: #940000;
     }
 }

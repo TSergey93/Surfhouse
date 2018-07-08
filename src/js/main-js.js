@@ -20,9 +20,6 @@ var sidebar_menu_list = document.querySelector(".sidebar-menu__list");
 var sidebar_category_list = document.querySelector(".sidebar-category__list");
 var sidebar_brand_list = document.querySelector(".sidebar-brand__list");
 var sidebar_tags_list = document.querySelector(".sidebar-tags__wrapper");
-var view_icon_tile = document.querySelectorAll(".page-products__view-icon--tile");
-var view_icon_listing = document.querySelectorAll(".page-products__view-icon--listing");
-var localStorage_viewCatalog = localStorage.getItem("viewCatalog");
 
 /* Удаление классов */
 
@@ -43,7 +40,7 @@ sidebar_tags_list.classList.remove("sidebar-tags__wrapper--no-js");
 
 /* Открытие/закрытие мобильного меню */
 
-mobile_menu.addEventListener("click", function() {
+mobile_menu.onclick = function() {
     if (!mobile_menu.classList.contains("mobile-menu--opened")) {
         body.classList.toggle("mobile-menu-opened");
         mobile_menu.classList.toggle("mobile-menu--opened");
@@ -57,11 +54,13 @@ mobile_menu.addEventListener("click", function() {
             el.classList.toggle("mobile-menu__strip--opened");
         });
     }
-});
+}
 
-close_menu.addEventListener("click", function() {
+close_menu.onclick = function() {
     setTimeout(function() {
-        body.classList.toggle("mobile-menu-opened");
+        setTimeout(function() {
+            body.classList.toggle("mobile-menu-opened");
+        }, 1100);
         mobile_menu.classList.toggle("mobile-menu--opened");
         wrapper_strips.classList.toggle("mobile-menu__wrapper-strips--opened");
         strip_one.classList.toggle("mobile-menu__strip--one-opened");
@@ -73,49 +72,4 @@ close_menu.addEventListener("click", function() {
             el.classList.toggle("mobile-menu__strip--opened");
         });
     }, 100);
-});
-
-/* Отображение списка товаров */
-
-if (localStorage.getItem("viewCatalog") === "tile") {
-    [].forEach.call(view_icon_tile, function(el) {
-        el.classList.add("page-products__view-icon--active");
-    });
-} else if (localStorage.getItem("viewCatalog") === "listing") {
-    [].forEach.call(view_icon_listing, function(el) {
-        el.classList.add("page-products__view-icon--active");
-    });
-} else {
-    [].forEach.call(view_icon_tile, function(el) {
-        el.classList.add("page-products__view-icon--active");
-    });
-    localStorage.setItem("viewCatalog", "tile");
 }
-
-[].forEach.call(view_icon_tile, function(el) {
-    el.addEventListener("click", function() {
-        if (!view_icon_tile[1].classList.contains("page-products__view-icon--active")) {
-            [].forEach.call(view_icon_tile, function(elem) {
-                elem.classList.add("page-products__view-icon--active");
-            });
-            [].forEach.call(view_icon_listing, function(elem) {
-                elem.classList.remove("page-products__view-icon--active");
-            });
-            localStorage.setItem("viewCatalog", "tile");
-        }
-    })
-});
-
-[].forEach.call(view_icon_listing, function(el) {
-    el.addEventListener("click", function() {
-        if (!view_icon_listing[1].classList.contains("page-products__view-icon--active")) {
-            [].forEach.call(view_icon_listing, function(elem) {
-                elem.classList.add("page-products__view-icon--active");
-            });
-            [].forEach.call(view_icon_tile, function(elem) {
-                elem.classList.remove("page-products__view-icon--active");
-            });
-            localStorage.setItem("viewCatalog", "listing");
-        }
-    })
-});

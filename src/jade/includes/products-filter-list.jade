@@ -2,9 +2,9 @@ section.page-products__filter-list
     div.page-products__sort-wrapper
         label.page-products__sort-text SORT BY
         select.page-products__sort-select
-            option(value="null") Position
-            option(value="1") Item 1
-            option(value="2") Item 2
+            option(value="position" id="position") Position
+            option(value="price" id="price") Price
+            option(value="name" id="name") Name
         svg.page-products__select-btn.page-products__select-btn--sort
             use(href="img/svg_sprite.svg#arrow")
         span.page-products__sort-pointer &uarr;
@@ -19,9 +19,9 @@ section.page-products__filter-list
     div.page-products__show-wrapper
         label.page-products__show-text SHOW
         select.page-products__show-select
-            option(value="null") 9
-            option(value="1") 18
-            option(value="2") 27
+            option(value="9") 9
+            option(value="18") 18
+            option(value="27") 27
         svg.page-products__select-btn.page-products__select-btn--show
             use(href="img/svg_sprite.svg#arrow")
         span.page-products__show-page PER PAGE

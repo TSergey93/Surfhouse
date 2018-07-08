@@ -28,8 +28,8 @@ gulp.task('copy', function() {
 		'src/fonts/**/*.{woff,woff2}',
 		'src/img/**/*.{png,jpg,gif}',
 		'src/img/*.svg',
-		'src/js/**',
-		'src/*.html'
+		'src/data/**',
+		'src/favicon.ico'
 	], {
 		base: 'src'
 	})
@@ -56,19 +56,15 @@ gulp.task('svgsprite', function(){
 });
 
 gulp.task('jade', function() {
-	gulp.src('src/jade/**/*.jade')
-		gulp.src('src/jade/*.jade')
-			.pipe(plumber())
-			//.pipe(jade({pretty: true, pretty: '\t'}))
-			//.pipe(gulp.dest('src/other/'))
-			//gulp.src('src/**/*.jade')
-			.pipe(jade())
-			.pipe(gulp.dest('build/'))
-			.pipe(server.reload({stream: true}));
+	gulp.src(['!src/jade/mixins.jade', 'src/jade/*.jade'])
+		.pipe(plumber())
+		.pipe(jade())
+		.pipe(gulp.dest('build/'))
+		.pipe(server.reload({stream: true}));
 });
 
 gulp.task('style', function() {
-	gulp.src('src/less/style.less')
+	gulp.src(['!src/less/mixins.less', '!src/less/normalize.less', '!src/less/variable.less', 'src/less/*.less'])
 		.pipe(plumber())
 		.pipe(less())
 		.pipe(postcss([
@@ -83,7 +79,6 @@ gulp.task('style', function() {
 			})
 		]))
 		.pipe(gcmq())
-		//.pipe(gulp.dest('src/other/'))
 		.pipe(minify())
 		.pipe(gulp.dest('build/css'))
 		.pipe(server.reload({stream: true}));
@@ -93,7 +88,6 @@ gulp.task('script', function() {
 	gulp.src('src/js/*.js')
 		.pipe(plumber())
 		.pipe(jsmin())
-  //.pipe(rename({suffix: '.min'}))
 		.pipe(gulp.dest('build/js/'))
 		.pipe(server.reload({stream: true}));
 });

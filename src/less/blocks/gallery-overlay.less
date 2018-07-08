@@ -1,0 +1,153 @@
+.gallery-overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: fade(@black, 50);
+    z-index: 10;
+
+    &--hidden {
+        display: none;
+    }
+}
+
+.gallery-overlay__preview {
+    width: 80vw;
+    max-width: 1540px;
+    height: ~'calc(80vh - 200px)';
+    min-height: 535px;
+    max-height: 800px;
+    background-size: auto 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media @tablet-width {
+        width: ~'calc(100% - 60px)';
+        height: ~'calc(70vh - 200px)';
+        min-height: 400px;
+    }
+}
+
+.gallery-overlay__thumbnails {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    max-width: 1540px;
+
+    @media @tablet-width {
+        flex-wrap: wrap;
+        width: ~'calc(100% - 130px)';
+    }
+}
+
+.gallery-overlay__thumbnails-photo {
+    .cursor();
+    height: 150px;
+    margin: 25px 15px 0;
+    user-select: none;
+
+    &--active {
+        border: 5px solid @orange;
+    }
+
+    @media @tablet-width {
+        height: auto;
+        max-width: 15%;
+        min-width: 70px;
+        max-height: 150px;
+
+        &:nth-of-type(n+8) {
+            display: none;
+        }
+    }
+
+    @media @mobile-width {
+        &:nth-of-type(n+3) {
+            display: none;
+        }
+    }
+}
+
+.gallery-overlay__arrows {
+    .cursor();
+    position: absolute;
+    width: 30px;
+    height: 75px;
+    top: ~'calc(50% - 32px)';
+    margin: 0;
+    padding: 8px;
+    fill: @white;
+
+    &--left {
+        transform: rotate(180deg);
+        left: -40px;
+    }
+
+    &--right {
+        right: -40px;
+    }
+}
+
+.gallery-overlay__close {
+    .cursor();
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 45px;
+    height: 45px;
+    padding: 5px;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        height: 60px;
+        top: -2px;
+        right: 23px;
+        border-left: 9px solid @white;
+        border-radius: 30%;
+    }
+
+    &::after {
+        transform: rotate(45deg);
+    }
+
+    &::before {
+        transform: rotate(-45deg);
+    }
+
+    @media @tablet-width {
+        top: 40px;
+        right: 35px;
+        width: 35px;
+        height: 35px;
+
+        &::before,
+        &::after {
+            height: 45px;
+            top: 0;
+            right: 18px;
+        }
+    }
+
+    @media @mobile-width {
+        top: 20px;
+        right: 15px;
+        width: 21px;
+        height: 20px;
+
+        &::before,
+        &::after {
+            height: 27px;
+            top: 2px;
+            right: 13px;
+            border-left-width: 5px;
+        }
+    }
+}

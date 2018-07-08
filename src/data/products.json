@@ -1,0 +1,109 @@
+[
+    {
+        "name": "Sleeve Spring Suit",
+        "price": "865.00",
+        "price_num": "86500",
+        "pictures": "img/products/sleeve_spring_suit.jpg",
+        "vobler": "new"
+    },
+
+    {
+        "name": "Salty Dayz",
+        "price": "770.50",
+        "price_num": "86500",
+        "pictures": "img/products/salty_dayz.jpg",
+        "sale": "1,270.15",
+        "vobler": "hot"
+    },
+
+    {
+        "name": "Cheeky Jane",
+        "price": "280.70",
+        "price_num": "28070",
+        "pictures": "img/products/cheeky_jane.jpg"
+    },
+
+    {
+        "name": "Synergy 2mm Back Zip",
+        "price": "765.00",
+        "price_num": "76500",
+        "pictures": "img/products/synergy_2mm_back_zip.jpg"
+    },
+
+    {
+        "name": "Synergy 2mm",
+        "price": "230.50",
+        "price_num": "23050",
+        "pictures": "img/products/synergy_2mm.jpg"
+    },
+
+    {
+        "name": "Surf Yoke 19 QS",
+        "price": "330.70",
+        "price_num": "33070",
+        "pictures": "img/products/surf_yoke_19_qs.jpg"
+    },
+
+    {
+        "name": "Og Scallop Solid",
+        "price": "765.00",
+        "price_num": "76500",
+        "pictures": "img/products/og_scallop_solid.jpg"
+    },
+
+    {
+        "name": "Stripe 19 QS",
+        "price": "230.50",
+        "price_num": "23050",
+        "pictures": "img/products/stripe_19_qs.jpg"
+    },
+
+    {
+        "name": "Yoke 19 QS",
+        "price": "1,130.70",
+        "price_num": "113070",
+        "pictures": "img/products/yoke_19_qs.jpg"
+    },
+
+    {
+        "name": "Dolls Tank Top",
+        "price": "765.00",
+        "price_num": "76500",
+        "pictures": "img/products/dolls_tank_top.jpg"
+    },
+
+    {
+        "name": "Pullover Top",
+        "price": "230.50",
+        "price_num": "23050",
+        "pictures": "img/products/pullover_top.jpg"
+    },
+
+    {
+        "name": "Enever Top",
+        "price": "1,130.70",
+        "price_num": "113070",
+        "pictures": "img/products/enever_top.jpg"
+    },
+
+    {
+        "name": "Relay Race Henley Top",
+        "price": "765.00",
+        "price_num": "76500",
+        "pictures": "img/products/relay_race_henley_top.jpg"
+    },
+
+    {
+        "name": "Breeze Zip UP",
+        "price": "230.50",
+        "price_num": "23050",
+        "pictures": "img/products/breeze_zip_up.jpg"
+    },
+
+    {
+        "name": "Breeze Zip UP Jacke",
+        "price": "480.70",
+        "price_num": "48070",
+        "pictures": "img/products/breeze_zip_up_jacke.jpg"
+    }
+]

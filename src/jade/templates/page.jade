@@ -21,4 +21,5 @@ html(lang="en")
             include ../includes/big-widgets
         include ../includes/footer
         include ../includes/mobile-menu
-    script(type="text/javascript" src="js/main-js.js?rev=@@hash")
+    block js
+        +scripts("js/product.js?rev=@@hash", "js/products-list.js?rev=@@hash", "js/main-js.js?rev=@@hash")
