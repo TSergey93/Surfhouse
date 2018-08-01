@@ -62,13 +62,15 @@
 }
 
 .footer-bar__link {
-    display: block;
-    padding: 5px;
-    fill: @white;
     font-size: 0;
-    transition: fill 150ms linear;
 
-    &--fb {
+    svg {
+        padding: 5px;
+        fill: @white;
+        transition: fill 150ms linear;
+    }
+
+    &--fb svg {
         width: 8px;
         height: 16px;
 
@@ -77,7 +79,7 @@
         }
     }
 
-    &--tw {
+    &--tw svg {
         width: 16px;
         height: 14px;
 
@@ -86,7 +88,7 @@
         }
     }
 
-    &--pint {
+    &--pint svg {
         width: 14px;
         height: 16px;
 
@@ -95,7 +97,7 @@
         }
     }
 
-    &--google {
+    &--google svg {
         width: 14px;
         height: 15px;
 
@@ -104,7 +106,7 @@
         }
     }
 
-    &--tumb {
+    &--tumb svg {
         width: 10px;
         height: 15px;
 
@@ -113,7 +115,7 @@
         }
     }
 
-    &--inst {
+    &--inst svg {
         width: 16px;
         height: 16px;
 
@@ -122,7 +124,7 @@
         }
     }
 
-    &--rss {
+    &--rss svg {
         width: 14px;
         height: 15px;
 

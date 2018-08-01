@@ -8,6 +8,7 @@ var closeButton = document.querySelector(".gallery-overlay__close");
 var pictures = document.querySelectorAll(".page-description__pictures img");
 var nextThumbnailsPhoto = document.querySelector(".gallery-overlay__arrows--right");
 var lastThumbnailsPhoto = document.querySelector(".gallery-overlay__arrows--left");
+var descriptionInfo = document.querySelectorAll(".page-description__info-link");
 var ind = 0;
 
 /* Функция стирания активного класса с картинок */
@@ -113,4 +114,15 @@ lastThumbnailsPhoto.onclick = function() {
 closeButton.onclick = function() {
     gallery.classList.add("gallery-overlay--hidden");
     resetActive();
-}
+};
+
+/* Переключение вкладок информации */
+
+[].forEach.call(descriptionInfo, function(el) {
+    el.onclick = function(e) {
+        e.preventDefault();
+        var active = document.querySelector(".page-description__info-link--active");
+        active.classList.remove("page-description__info-link--active");
+        el.classList.add("page-description__info-link--active");
+    };
+});

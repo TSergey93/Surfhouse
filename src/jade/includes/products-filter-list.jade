@@ -1,15 +1,15 @@
 section.page-products__filter-list
     div.page-products__sort-wrapper
-        label.page-products__sort-text SORT BY
+        label.page-products__sort-text Sort by
         select.page-products__sort-select
             option(value="position" id="position") Position
             option(value="price" id="price") Price
             option(value="name" id="name") Name
         svg.page-products__select-btn.page-products__select-btn--sort
             use(href="img/svg_sprite.svg#arrow")
-        span.page-products__sort-pointer &uarr;
+        a(href="#" class="page-products__sort-pointer") &uarr;
     div.page-products__view-wrapper
-        span.page-products__view-text VIEW AS:
+        span.page-products__view-text View as:
         div.page-products__view-icon.page-products__view-icon--tile
             svg
                 use(href="img/svg_sprite.svg#sort_tile")
@@ -17,16 +17,16 @@ section.page-products__filter-list
             svg
                 use(href="img/svg_sprite.svg#sort_desc")
     div.page-products__show-wrapper
-        label.page-products__show-text SHOW
+        label.page-products__show-text Show
         select.page-products__show-select
             option(value="9") 9
             option(value="18") 18
             option(value="27") 27
         svg.page-products__select-btn.page-products__select-btn--show
             use(href="img/svg_sprite.svg#arrow")
-        span.page-products__show-page PER PAGE
+        span.page-products__show-page Per page
     div.page-products__pagination-wrapper
-        span.page-products__pagination-text PAGE:
+        span.page-products__pagination-text Page:
         ul.page-products__pagination-list
             li.page-products__pagination-item
                 a.page-products__pagination-link(href="#") 1

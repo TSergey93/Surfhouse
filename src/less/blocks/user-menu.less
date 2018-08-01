@@ -2,6 +2,7 @@
     width: 270px;
     background-color: @light-orange;
     font: 12px/1 Raleway, sans-serif;
+    text-transform: uppercase;
 
     @media @mobile-width {
         background-color: inherit;
@@ -10,6 +11,10 @@
             margin: 0 auto;
             background-color: @light-orange;
         }
+    }
+
+    a {
+        text-decoration: none;
     }
 }
 
@@ -23,9 +28,9 @@
 }
 
 .user-menu__login {
-    .cursor();
     margin-left: 34px;
     padding: 7px 0;
+    color: @light-orange;
 
     &:hover {
         font-weight: 400;
@@ -33,10 +38,10 @@
 }
 
 .user-menu__wish {
-    .cursor();
     margin-left: auto;
     margin-right: 31px;
     padding: 7px 0;
+    color: @light-orange;
 
     &:hover {
         font-weight: 400;
@@ -76,15 +81,14 @@
     margin-left: 2px;
     font: 400 12px/1 Raleway, sans-serif;
     color: @dirty-yellow;
+    text-transform: lowercase;
 
     &:hover {
-        .cursor();
         text-decoration: underline;
     }
 }
 
 .user-menu__edit {
-    .cursor();
     margin-top: -1px;
     margin-left: auto;
     margin-right: 18px;
@@ -107,15 +111,16 @@
 
 .user-menu__cross {
     position: absolute;
-    width: 10px;
-    height: 10px;
+    width: 20px;
+    height: 20px;
     top: 5px;
-    right: 4px;
+    right: 3px;
 
     &::before,
     &::after {
         content: "";
         position: absolute;
+        right: 9px;
         width: 2px;
         height: 17px;
         background-color: #fabe02;
@@ -204,19 +209,6 @@
                 color: @black;
             }
         }
-
-        &[type="button"] {
-            width: 34px;
-            background-color: @dark-grey;
-
-            &:focus {
-                outline: none;
-            }
-
-            &:hover {
-                background-color: #3d3d3d;
-            }
-        }
     }
 
     @media @mobile-width {
@@ -224,30 +216,47 @@
     }
 }
 
-.user-menu__search-icon {
-    position: absolute;
-    width: 12px;
-    height: 13px;
-    top: 11px;
-    right: 11px;
-    pointer-events: none;
+.user-menu__search-btn {
+    width: 34px;
+    border: none;
+    background-color: @dark-grey;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        background-color: #3d3d3d;
+    }
+
+    & > svg {
+        width: 12px;
+        height: 13px;
+        margin-top: 2px;
+        pointer-events: none;
+    }
 }
 
-.user-menu__clear-search-icon {
+.user-menu__clear-search-btn {
     position: absolute;
-    width: 10px;
-    height: 10px;
     top: 7px;
     right: 38px;
+    box-sizing: content-box;
+    width: 10px;
+    height: 10px;
     padding: 5px;
+    border: none;
+    background-color: transparent;
+    outline: none;
 
     &::after,
     &::before {
         content: "";
         position: absolute;
+        top: 5px;
+        left: 9px;
         width: 2px;
         height: 11px;
-        left: 9px;
         background-color: #686868;
     }
 

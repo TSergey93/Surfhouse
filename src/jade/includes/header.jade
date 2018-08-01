@@ -1,41 +1,43 @@
 img.main-header__logo.main-header__logo--no-js(src="img/surfhouse_logo.png" alt="Logo")
 ul.main-header__social-icons-list.main-header__social-icons-list--no-js
     li.main-header__social-icons-item
-        svg.main-header__link.main-header__link--fb We are in FB
-            use(href="img/svg_sprite.svg#fb")
+        a(href="#" class="main-header__link main-header__link--fb") We are in FB
+            svg: use(href="img/svg_sprite.svg#fb")
     li.main-header__social-icons-item
-        svg.main-header__link.main-header__link--tw We are in TW
-            use(href="img/svg_sprite.svg#tw")
+        a(href="#" class="main-header__link main-header__link--tw") We are in TW
+            svg: use(href="img/svg_sprite.svg#tw")
     li.main-header__social-icons-item
-        div.main-header__link.main-header__link--ytb We are in YTB
+        a(href="#" class="main-header__link main-header__link--ytb") We are in YTB
+            div
     li.main-header__social-icons-item
-        svg.main-header__link.main-header__link--pint We are in Pint
-            use(href="img/svg_sprite.svg#pint")
+        a(href="#" class="main-header__link main-header__link--pint") We are in Pint
+            svg: use(href="img/svg_sprite.svg#pint")
     li.main-header__social-icons-item
-        svg.main-header__link.main-header__link--inst We are in Inst
-            use(href="img/svg_sprite.svg#inst")
+        a(href="#" class="main-header__link main-header__link--inst") We are in Inst
+            svg: use(href="img/svg_sprite.svg#inst")
     li.main-header__social-icons-item
-        span.main-header__lang EN
+        a(href="#" class="main-header__lang") En
 article.user-menu.user-menu--no-js
     div.user-menu__bar
-        span.user-menu__login LOG IN
-        span.user-menu__wish WISH LIST(0)
+        a(href="#").user-menu__login Log in
+        a(href="#").user-menu__wish Wish List(0)
     div.user-menu__info-wrapper
         div.user-menu__info
             |$1,459.50
             br
-            span.user-menu__items 2 items
-        div.user-menu__edit
+            a(href="#").user-menu__items 2 items
+        a(href="#").user-menu__edit
             |EDIT
             span.user-menu__cross
     ul.user-menu__buttons
         li
-            a(href="#") VIEW CART
+            a(href="#") View cart
         li
-            a(href="#") CHECKOUT
+            a(href="#") Checkout
     form.user-menu__form
         input(type="text" placeholder="SEARCH")
-        input(type="button")
-        svg.user-menu__search-icon
-            use(href="img/svg_sprite.svg#search")
-        div.user-menu__clear-search-icon
+        //input(type="button")
+        button(type="button" class="user-menu__search-btn")
+            svg
+                use(href="img/svg_sprite.svg#search")
+        button(type="button" class="user-menu__clear-search-btn")

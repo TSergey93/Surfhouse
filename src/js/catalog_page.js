@@ -68,7 +68,8 @@ function setActiveFilter(value) {
 }
 
 [].forEach.call(sort_poiner, function(el) {
-    el.onclick = function() {
+    el.onclick = function(e) {
+        e.preventDefault();
         if (localStorage.getItem("sortPoiner") === "reverse") {
             el.classList.remove("page-products__sort-pointer--reverse");
             localStorage.setItem("sortPoiner", "normal");

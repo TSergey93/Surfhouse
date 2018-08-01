@@ -73,49 +73,6 @@
     }
 }
 
-.main-header__wrapper {
-    .conteiner();
-    display: grid;
-    grid-template-columns: 270px 1fr;
-    padding-top: 24px;
-    padding-bottom: 23px;
-    font-family: Raleway, sans-serif;
-
-    @media @tablet-width {
-        grid-template-columns: 270px;
-        padding-bottom: 20px;
-    }
-
-    @media @mobile-width {
-        position: fixed;
-        padding-top: 15px;
-        top: 20px;
-        right: -270px;
-        opacity: 0;
-        z-index: 6;
-        transition: transform 1ms 1s, opacity .5s;
-
-        &--opened {
-            opacity: 1;
-            transform: translate3d(-270px, 0, 0);
-            transition: transform 1ms 1s, opacity .5s linear 1s;
-        }
-
-        &--no-js {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            position: relative;
-            top: 0;
-            right: 0;
-            margin: 0 auto 10px;
-            padding-top: 0;
-            opacity: 1;
-            z-index: 1;
-        }
-    }
-}
-
 .main-header__logo {
     margin: 0 0 42px 69px;
 
@@ -143,6 +100,7 @@
     padding-top: 21px;
     padding-right: 9px;
     text-align: right;
+    text-transform: uppercase;
 
     @media @tablet-width {
         background-color: fade(@black, 75%);
@@ -187,12 +145,15 @@
 
 .main-header__link {
     display: block;
-    padding: 5px;
-    fill: @white;
     font-size: 0;
-    transition: fill 150ms linear;
 
-    &--fb {
+    svg {
+        padding: 5px;
+        fill: @white;
+        transition: fill 150ms linear;
+    }
+
+    &--fb svg {
         width: 8px;
         height: 16px;
 
@@ -201,7 +162,7 @@
         }
     }
 
-    &--tw {
+    &--tw svg {
         width: 16px;
         height: 14px;
 
@@ -210,10 +171,12 @@
         }
     }
 
-    &--ytb {
+    &--ytb div {
+        display: inline-block;
         position: relative;
         width: 16px;
         height: 16px;
+        padding: 5px;
         background: url("../img/ytb.svg") no-repeat;
         background-origin: content-box;
 
@@ -229,14 +192,12 @@
             transition: opacity 150ms linear;
         }
 
-        &:hover {
-            &::before {
-                opacity: 1;
-            }
+        &:hover::before {
+            opacity: 1;
 		}
     }
 
-    &--pint {
+    &--pint svg {
         width: 14px;
         height: 16px;
 
@@ -245,7 +206,7 @@
         }
     }
 
-    &--inst {
+    &--inst svg {
         width: 16px;
         height: 16px;
 
@@ -256,13 +217,13 @@
 }
 
 .main-header__lang {
-    .cursor();
     display: block;
     position: relative;
     padding: 5px;
     padding-right: 15px;
     color: @dirty-white;
     font: 700 10px/1 Raleway, sans-serif;
+    text-decoration: none;
 
     &::before {
         content: '';

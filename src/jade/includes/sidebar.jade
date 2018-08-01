@@ -1,17 +1,17 @@
-- var sidebarMenu = {"ABOUT": "#", "APPAREL": "#", "SURF APPAREL": "#", "WINDSURF": "#", "KITESURF": "#", "ACCESSORIES": "#", "SALE": "#", "BRANDS": "#", "BLOG": "#", "GADGETS": "#", "CANTACT": "#"}
-- var sidebarCategory = {"MEN": "#", "WOMEN": "#", "KIDS": "#", "WETSUITS": "#", "OUTERWEAR": "#"}
-- var sidebarBrand = {"BILLABONG": "#", "ELEMENT": "#", "O'NEILL": "#", "OAKLEY": "#", "REEF": "#", "QUIKSILVER": "#", "RIPCURL": "#", "JACKSS": "#"}
+- var sidebarMenu = {"About": "#", "Apparel": "#", "Surf apparel": "#", "Windsurf": "#", "Kitesurf": "#", "Accessories": "#", "Sale": "#", "Brands": "#", "Blog": "#", "Gadgets": "#", "Cantact": "#"}
+- var sidebarCategory = {"Men": "#", "Women": "#", "Kids": "#", "Wetsuits": "#", "Outerwear": "#"}
+- var sidebarBrand = {"Billabong": "#", "Element": "#", "O'Neill": "#", "Oakley": "#", "Reef": "#", "Quiksilver": "#", "Ripcurl": "#", "Jackss": "#"}
 
 include ../mixins
 
 section.sidebar-menu.sidebar-menu--no-js
-    h2.sidebar-menu__title MENU
+    h2.sidebar-menu__title Menu
     +sidebarMenu("sidebar-menu", sidebarMenu)
 section.sidebar-category.sidebar-category--no-js
-    h2.sidebar-category__title CATEGORY OPTIONS
+    h2.sidebar-category__title Category options
     +sidebarMenu("sidebar-category", sidebarCategory)
 section.sidebar-brand.sidebar-brand--no-js
-    h2.sidebar-brand__title BRAND OPTIONS
+    h2.sidebar-brand__title Brand options
     +sidebarMenu("sidebar-brand", sidebarBrand)
 section.sidebar-tags.sidebar-tags--no-js
     h2.sidebar-tags__title Tags Widget

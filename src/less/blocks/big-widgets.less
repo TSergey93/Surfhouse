@@ -20,7 +20,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin: 0;
-    text-indent: -9999px;
+    font-size: 0;
 
     @media (max-width: 1200px) {
         margin: 0 -15px;
@@ -60,19 +60,21 @@
 }
 
 .big-widgets__link {
-    fill: @white;
+    svg {
+        fill: @white;
+    }
 
-    &--fb {
+    &--fb svg {
         width: 30px;
         height: 62px;
     }
 
-    &--tw {
+    &--tw svg {
         width: 64px;
         height: 52px;
     }
 
-    &--pint {
+    &--pint svg {
         width: 64px;
         height: 64px;
     }
